@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chat app</title>
+    
+
+    <!-- boostrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!-- font -->
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    </style> 
+
+</head>
+<body>
+
+<!-- <div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="text-center">
+				
+				    
+			</div> 
+		</div>
+	</div>
+</div> -->
+
+<div class="container">
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <h1> File upload </h1>
+   <%= typeof msg != "undefined" ? msg : "" %>
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input name="myImage" type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+      <button type="submit" class="btn">submit</button>
+    </div>
+    <br><br>
+</form><br><br>
+<img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">  
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+</html>
